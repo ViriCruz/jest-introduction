@@ -23,3 +23,15 @@ test('return the division between 2 and 2', () => {
 test('return the multiplication between 2 and 2', () => {
   expect(functions.calculator(2, 2).multiply()).toEqual(4)
 })
+
+test('using punctuation marks', () => {
+  expect(functions.cipher('helló world.', 1).ceasar()).toEqual('ifmmó xpsme.')
+})
+
+test('return encrypted alphabet', () => {
+  expect(functions.cipher('abcdefghijklmnopqrstuvwxyz', 1).ceasar()).toEqual('bcdefghijklmnopqrstuvwxyza')
+})
+
+test('key is greater than alphabet length', () => {
+  expect(functions.cipher('helló world.', 10).ceasar()).toEqual('rovvó gybvn.')
+})
