@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ViriCruz/jest-introduction#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
