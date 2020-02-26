@@ -24,14 +24,18 @@ const cipher = (string, shift) => {
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
   const phraseSplit = () => string.split('');
+  const isUppercase = letter => letter.toUpperCase() === letter ? true : false
   const ceasar = () => {
     let cipherString = '';
     phraseSplit().forEach((item) => {
-      const index = alphabet.indexOf(item);
+      const uppercase = isUppercase(item)
+      const letter = uppercase ? item.toLowerCase() : item
+      const index = alphabet.indexOf(letter);
       if (index > -1) {
         const position = (index + shift) > alphabet.length - 1
           ? (index + shift) - alphabet.length : (index + shift);
-        cipherString += alphabet[position];
+
+        cipherString += uppercase ? alphabet[position].toUpperCase() : alphabet[position];
       } else {
         cipherString += item;
       }
@@ -43,17 +47,17 @@ const cipher = (string, shift) => {
   };
 };
 
-const analyze = (arr) => {
-  const average = () => arr.reduce((a, i) => Math.ceil((a + i) / arr.length));
+const analize = (arr) => {
+  const average = () => Math.ceil((arr.reduce((a, i) => a + i, 0)) / arr.length);
   const min = () => Math.min(...arr);
   const max = () => Math.max(...arr);
   const length = () => arr.length;
-
+  
   return {
-    average: average(),
-    min: min(),
-    max: max(),
-    length: length(),
+      average: average(),
+      min: min(),
+      max: max(),
+      length: length(),
   };
 };
 
@@ -62,5 +66,5 @@ module.exports = {
   reverseString,
   calculator,
   cipher,
-  analyze,
+  analize,
 };
