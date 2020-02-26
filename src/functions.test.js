@@ -37,16 +37,16 @@ test('key is greater than alphabet length', () => {
 });
 
 test('cipher uppercase words', () => {
-  expect(functions.cipher('Z!', 1).ceasar()).toEqual('A!')
-})
+  expect(functions.cipher('Z!', 1).ceasar()).toEqual('A!');
+});
 
 test('return and object with average, min, max, length', () => {
-  expect(functions.analize([1,2,3])).toEqual({
+  expect(functions.analize([1, 2, 3])).toEqual({
     average: 2,
     min: 1,
     max: 3,
-    length: 3
-  })
+    length: 3,
+  });
 });
 
 test('return and object with average, min, max, length', () => {
@@ -54,6 +54,6 @@ test('return and object with average, min, max, length', () => {
     average: 4,
     min: 1,
     max: 8,
-    length: 6
-  })
+    length: 6,
+  });
 });
