@@ -41,7 +41,7 @@ test('cipher uppercase words', () => {
 });
 
 test('return and object with average, min, max, length', () => {
-  expect(functions.analize([1, 2, 3])).toEqual({
+  expect(functions.analyze([1, 2, 3])).toEqual({
     average: 2,
     min: 1,
     max: 3,
@@ -50,7 +50,7 @@ test('return and object with average, min, max, length', () => {
 });
 
 test('return and object with average, min, max, length', () => {
-  expect(functions.analize([1, 8, 3, 4, 2, 6])).toEqual({
+  expect(functions.analyze([1, 8, 3, 4, 2, 6])).toEqual({
     average: 4,
     min: 1,
     max: 8,
@@ -59,7 +59,7 @@ test('return and object with average, min, max, length', () => {
 });
 
 test('return and object with average, min, max, length', () => {
-  expect(functions.analize([1, 5, 3, 9, 3])).toEqual({
+  expect(functions.analyze([1, 5, 3, 9, 3])).toEqual({
     average: 4.2, min: 1, max: 9, length: 5,
   });
 });

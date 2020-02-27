@@ -47,7 +47,7 @@ const cipher = (string, shift) => {
   };
 };
 
-const analize = (arr) => {
+const analyze = (arr) => {
   const average = () => arr.reduce((a, i) => (a + i)) / arr.length;
   const min = () => Math.min(...arr);
   const max = () => Math.max(...arr);
