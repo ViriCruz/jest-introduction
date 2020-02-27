@@ -70,5 +70,5 @@ module.exports = {
   reverseString,
   calculator,
   cipher,
-  analize,
+  analyze,
 };
