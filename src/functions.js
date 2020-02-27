@@ -23,15 +23,23 @@ const calculator = (a, b) => {
 const cipher = (string, shift) => {
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
+<<<<<<< HEAD
   const phraseSplit = () => string.toLowerCase().split('');
+=======
+  const phraseSplit = () => string.split('');
+  const isUppercase = letter => (letter.toUpperCase() === letter);
+>>>>>>> 1c450f80cbf61cac6dd79b0a321677a3977264b3
   const ceasar = () => {
     let cipherString = '';
     phraseSplit().forEach((item) => {
-      const index = alphabet.indexOf(item);
+      const uppercase = isUppercase(item);
+      const letter = uppercase ? item.toLowerCase() : item;
+      const index = alphabet.indexOf(letter);
       if (index > -1) {
         const position = (index + shift) > alphabet.length - 1
           ? (index + shift) - alphabet.length : (index + shift);
-        cipherString += alphabet[position];
+
+        cipherString += uppercase ? alphabet[position].toUpperCase() : alphabet[position];
       } else {
         cipherString += item;
       }
@@ -62,5 +70,5 @@ module.exports = {
   reverseString,
   calculator,
   cipher,
-  analyze,
+  analize,
 };
