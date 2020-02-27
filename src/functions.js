@@ -23,7 +23,7 @@ const calculator = (a, b) => {
 const cipher = (string, shift) => {
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-  const phraseSplit = () => string.split('');
+  const phraseSplit = () => string.toLowerCase().split('');
   const ceasar = () => {
     let cipherString = '';
     phraseSplit().forEach((item) => {
@@ -44,7 +44,7 @@ const cipher = (string, shift) => {
 };
 
 const analyze = (arr) => {
-  const average = () => arr.reduce((a, i) => Math.ceil((a + i) / arr.length));
+  const average = () => arr.reduce((a, i) => (a + i))/arr.length;
   const min = () => Math.min(...arr);
   const max = () => Math.max(...arr);
   const length = () => arr.length;

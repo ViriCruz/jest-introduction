@@ -41,3 +41,9 @@ test('return and object with average, min, max, length', () => {
     average: 2, min: 1, max: 3, length: 3,
   });
 });
+
+test('return and object with average, min, max, length', () => {
+  expect(functions.analyze([1, 5, 3, 9, 3])).toEqual({
+    average: 4.2, min: 1, max: 9, length: 5,
+  });
+});
