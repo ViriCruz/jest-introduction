@@ -1,0 +1,28 @@
+{
+  "name": "jest-introduction",
+  "version": "1.0.0",
+  "description": "This projects focus on jest basics with javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViriCruz/jest-introduction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViriCruz/jest-introduction/issues"
+  },
+  "homepage": "https://github.com/ViriCruz/jest-introduction#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0"
+  }
+}
